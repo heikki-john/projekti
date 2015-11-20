@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Favorite Numbers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Num1</th>
+      <th>Num2</th>
+      <th>Num3</th>
+      <th>Num4</th>
+      <th>Num5</th>
+      <th>Num6</th>
+      <th>Num7</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @favorite_numbers.each do |favorite_number| %>
+      <tr>
+        <td><%= favorite_number.user_id %></td>
+        <td><%= favorite_number.num1 %></td>
+        <td><%= favorite_number.num2 %></td>
+        <td><%= favorite_number.num3 %></td>
+        <td><%= favorite_number.num4 %></td>
+        <td><%= favorite_number.num5 %></td>
+        <td><%= favorite_number.num6 %></td>
+        <td><%= favorite_number.num7 %></td>
+        <td><%= link_to 'Show', favorite_number %></td>
+        <td><%= link_to 'Edit', edit_favorite_number_path(favorite_number) %></td>
+        <td><%= link_to 'Destroy', favorite_number, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Favorite number', new_favorite_number_path %>
