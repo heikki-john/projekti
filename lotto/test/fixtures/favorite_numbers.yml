@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  num1: 1
+  num2: 1
+  num3: 1
+  num4: 1
+  num5: 1
+  num6: 1
+  num7: 1
+
+two:
+  user_id: 1
+  num1: 1
+  num2: 1
+  num3: 1
+  num4: 1
+  num5: 1
+  num6: 1
+  num7: 1
