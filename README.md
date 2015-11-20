@@ -1,0 +1,2 @@
+# projekti
+Koulutushommaan liittyvä projekti
