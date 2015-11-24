@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'lotto_pages/home'
 
   get 'lotto_pages/help'
+  get 'lotto_pages/about'
 
   resources :favorite_numbers
   resources :users
@@ -10,7 +11,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-    root 'users#index'
+    root 'lotto_pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
