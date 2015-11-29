@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
-  get 'lotto_pages/home'
-
-  get 'lotto_pages/help'
-  get 'lotto_pages/about'
+  get 'help' => 'lotto_pages#help'
+  get 'about' => 'lotto_pages#about'
+  get 'contact' => 'lotto_pages#contact'
+  get 'signup' => 'users#new'
 
   resources :favorite_numbers
   resources :users
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

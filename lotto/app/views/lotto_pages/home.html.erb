@@ -1,9 +1,7 @@
-<% provide(:title, "Home") %>
+<% provide(:title, "Etusivu") %>
 <div class="center jumbotron">
-  <h1>Lotto sivut</h1>
+  <h1>Lottosivu</h1>
   <h2>Tähän tulee perusinfo sivusta</h2>
   
-  <%= link_to "Kirjaudu sisään", "#", class: "btn btn-lg btn-primary" %>
+  <%= link_to "Uusi käyttäjä", signup_path, class: "btn btn-lg btn-primary" %>
 </div>
-
-<%= link_to image_tag("veikkaus.png", alt: "Veikkaus"), 'http://veikkaus.fi/' %>
