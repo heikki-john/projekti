@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151120121404) do
+ActiveRecord::Schema.define(version: 20151204072221) do
 
   create_table "favorite_numbers", force: :cascade do |t|
     t.integer  "user_id"
@@ -30,8 +30,11 @@ ActiveRecord::Schema.define(version: 20151120121404) do
     t.string   "username"
     t.string   "password"
     t.string   "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "password_digest"
   end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end
