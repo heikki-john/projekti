@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   get 'help' => 'lotto_pages#help'
   get 'about' => 'lotto_pages#about'
   get 'contact' => 'lotto_pages#contact'
   get 'signup' => 'users#new'
-
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+  
   resources :favorite_numbers
   resources :users
   # The priority is based upon order of creation: first created -> highest priority.
