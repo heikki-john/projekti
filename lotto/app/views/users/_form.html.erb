@@ -16,18 +16,18 @@
 
       <div class="field">
         <%= f.label 'Käyttäjätunnus' %><br>
-        <%= f.text_field :username %>
+        <%= f.text_field :username, class: 'form-control' %>
       </div>
       <div class="field">
         <%= f.label 'Salasana' %><br>
-        <%= f.password_field :password %>
+        <%= f.password_field :password, class: 'form-control' %>
       </div>
       <div class="field">
         <%= f.label 'Sähköposti' %><br>
-        <%= f.text_field :email %>
+        <%= f.text_field :email, class: 'form-control' %>
       </div>
       <div class="actions">
-        <%= f.submit 'Luo' %>
+        <%= f.submit 'Luo', class: 'form-button' %>
       </div>
     <% end %>  
   </div>
