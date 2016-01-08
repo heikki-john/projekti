@@ -1,29 +1,35 @@
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-      <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user) do |f| %>
+      <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+          <ul>
+          <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label 'Käyttäjätunnus' %><br>
-    <%= f.text_field :username %>
+      <div class="field">
+        <%= f.label 'Käyttäjätunnus' %><br>
+        <%= f.text_field :username %>
+      </div>
+      <div class="field">
+        <%= f.label 'Salasana' %><br>
+        <%= f.password_field :password %>
+      </div>
+      <div class="field">
+        <%= f.label 'Sähköposti' %><br>
+        <%= f.text_field :email %>
+      </div>
+      <div class="actions">
+        <%= f.submit 'Luo' %>
+      </div>
+    <% end %>  
   </div>
-  <div class="field">
-    <%= f.label 'Salasana' %><br>
-    <%= f.text_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label 'Sähköposti' %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="actions">
-    <%= f.submit 'Luo' %>
-  </div>
-<% end %>
+</div>
+
